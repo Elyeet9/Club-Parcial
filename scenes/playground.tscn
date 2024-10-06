@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp6jkm08y0feq"]
+
+[ext_resource type="PackedScene" uid="uid://cf0fbo2ogxa52" path="res://scenes/blue.tscn" id="1_2l7m7"]
+[ext_resource type="Script" path="res://scripts/playground.gd" id="1_ca48m"]
+[ext_resource type="PackedScene" uid="uid://dsu7wa0st4rjr" path="res://scenes/black.tscn" id="2_nfy7s"]
+[ext_resource type="Texture2D" uid="uid://dwtbvm6oawajc" path="res://assets/Plazablankstage.jpg" id="2_tnofk"]
+[ext_resource type="PackedScene" uid="uid://glu5l6yoq1k0" path="res://scenes/white.tscn" id="3_rqlfd"]
+
+[node name="Playground" type="Node2D"]
+script = ExtResource("1_ca48m")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(455.404, 385.051)
+scale = Vector2(0.320091, 0.320091)
+texture = ExtResource("2_tnofk")
+
+[node name="Blue" parent="." instance=ExtResource("1_2l7m7")]
+position = Vector2(200, 561)
+motion_mode = 1
+
+[node name="Black" parent="." instance=ExtResource("2_nfy7s")]
+position = Vector2(476, 520)
+motion_mode = 0
+
+[node name="White" parent="." instance=ExtResource("3_rqlfd")]
+position = Vector2(757, 584)
